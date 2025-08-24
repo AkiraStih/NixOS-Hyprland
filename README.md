@@ -1,3 +1,6 @@
+# My old hyprland config, i switch to gnome and make this repo as an archive for those who want
+Current repo is <https://github.com/mafien0/NixOS-Config>
+
 # Preview
 
 <table border="1">
