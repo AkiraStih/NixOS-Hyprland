@@ -1,4 +1,4 @@
-# My old hyprland config, i switch to gnome and make this repo as an archive for those who want
+# My old hyprland config, i made a switch to `gnome` and made this repo as archive
 Current repo is <https://github.com/mafien0/NixOS-Config>
 
 # Preview
