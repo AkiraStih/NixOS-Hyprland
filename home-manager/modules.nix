@@ -16,7 +16,6 @@
 		./modules/cli
 		./modules/firefox
 		./modules/nixvim
-		./modules/nixcord
 		./modules/spicetify
 	];
 }
