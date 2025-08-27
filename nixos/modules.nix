@@ -9,6 +9,5 @@
 		./modules/user.nix
 		./modules/gnomeapps.nix
 		./modules/homelab.nix
-		./modules/t480.nix
 	];
 }
