@@ -16,6 +16,10 @@
 	# Tailscale
 	services.tailscale.enable = true;
 
+  	hardware.bluetooth.enable = true;
+
+	hardware.enableRedistributableFirmware = true;
+
 	# SSH
 	services.openssh = {
 		enable = true;
