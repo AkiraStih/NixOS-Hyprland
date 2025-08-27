@@ -15,7 +15,6 @@
 		qbittorrent
 		cargo
 		vscodium
-		unstable.hiddify-app
 		nekoray
 
 		# CLI
