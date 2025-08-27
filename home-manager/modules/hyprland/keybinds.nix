@@ -23,7 +23,7 @@
       "$mod, F, fullscreen,"
 
 			# Programs
-      "$mod, return, exec, $terminal"
+      "$mod, Q, exec, $terminal"
       "$mod, B, exec, $browser"
       "$mod, E, exec, $explorer"
       "$mod, T, exec, $calc"

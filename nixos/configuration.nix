@@ -27,7 +27,8 @@
 	};
 
 	services.displayManager.ly.enable = true;
-  services.openssh.enable = true;
+	hardware.enableRedistributableFirmware = true;
+
 	nix.settings.experimental-features = ["nix-command" "flakes"];
 	nixpkgs.config.allowUnfree = true;
 	system.stateVersion = "25.05";
