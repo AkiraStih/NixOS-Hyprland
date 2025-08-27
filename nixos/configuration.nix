@@ -8,6 +8,7 @@
 
 
   home-manager.backupFileExtension = "backup";
+	boot.kernelParams = [ "mem_sleep_default=s2idle" ];
 
   programs.nh = {
     enable = true;
