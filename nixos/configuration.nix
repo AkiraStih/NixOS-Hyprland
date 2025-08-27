@@ -14,6 +14,18 @@
     enable = true;
     flake = "/home/bogdan/nix";
   };
+	# Включаем TUN-модуль для ядра
+	boot.kernelModules = [ "tun" ];
+	
+	# Разрешаем пользователям создавать TUN-устройства
+	networking.extraHosts = ''
+	  # иногда нужно, но можно пропустить
+	'';
+	
+	# Если нужен systemd-udev для TUN
+	services.udev.extraRules = ''
+	  KERNEL=="tun", NAME="tun", MODE="0666"
+	'';
 
 
 	networking = {
