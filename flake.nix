@@ -4,6 +4,8 @@
 	inputs = {
 		nixpkgs.url = "github:nixos/nixpkgs/nixos-25.05";
 
+    	nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
+
 		home-manager = {
 			url = "github:nix-community/home-manager/release-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -38,6 +40,7 @@
 		nixvim,
 		nixcord,
 		spicetify-nix,
+		nixpkgs-unstable,
 		... }: let
 			system = "x86_64-linux";
 
@@ -56,6 +59,7 @@
 
 					specialArgs = {
 						inherit inputs system;
+						unstable = nixpkgs-unstable.legacyPackages.x86_64-linux;
 					};
 				};
 			};
