@@ -9,11 +9,13 @@
 		wasistlos
 		tutanota-desktop
 		element-desktop
-		protonvpn-gui
 		mpv
 		filezilla
 		blockbench
 		qbittorrent
+		cargo
+		vscodium
+		unstable.hiddify-app
 
 		# CLI
 		btop
@@ -43,7 +45,6 @@
 
 		# Other
 		home-manager
-		steam-run
 		gcc
 		jdk
 
