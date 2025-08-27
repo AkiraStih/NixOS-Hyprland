@@ -43,7 +43,7 @@
 		lua
 		gh
 		sl
-		neofetch
+		neovim
 
 		# Other
 		home-manager
