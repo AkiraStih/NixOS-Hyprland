@@ -77,7 +77,7 @@
 		  format-ethernet = "󰈀 {ifname}"; # Иконка для проводного подключения
 		  format-disconnected = "󰖪"; # Иконка и текст, когда нет подключения
 		  tooltip-format = "{ifname} via {gwaddr} "; # Подсказка при наведении
-		  on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor"; # Открывает GUI для настройки сетей
+		  on-click = "${pkgs.alacritty}/bin/alacritty -e nmtui"; # Открывает GUI для настройки сетей
 			};
 
 			"bluetooth" = {
