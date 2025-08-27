@@ -6,6 +6,10 @@
 	];
 	i18n.defaultLocale = "en_US.UTF-8";
 
+
+  bogdan.t480.rootfsUUID = "ВАШ-UUID-КОРНЕВОГО-РАЗДЕЛА";
+
+
   programs.nh = {
     enable = true;
     flake = "/home/bogdan/nix";
