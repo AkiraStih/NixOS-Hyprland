@@ -7,7 +7,7 @@
 	i18n.defaultLocale = "en_US.UTF-8";
 
 
-
+  home-manager.backupFileExtension = "backup";
 
   programs.nh = {
     enable = true;
