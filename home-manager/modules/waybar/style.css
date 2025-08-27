@@ -68,6 +68,4 @@ window#waybar {
 	border-bottom: 2px solid @ws-urgent;
 }
 
-#custom-notification {
-	margin-right: 0px;
-}
+
