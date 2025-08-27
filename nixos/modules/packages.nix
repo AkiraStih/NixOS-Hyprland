@@ -43,6 +43,7 @@
 		lua
 		gh
 		sl
+		neofetch
 
 		# Other
 		home-manager
