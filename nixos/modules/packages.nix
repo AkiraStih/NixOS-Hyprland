@@ -16,6 +16,7 @@
 		cargo
 		vscodium
 		nekoray
+		blueman
 
 		# CLI
 		btop
