@@ -19,6 +19,8 @@
 			
 			"network"
 			"custom/spacer"
+			"bluetooth"
+			"custom/spacer"
 			"pulseaudio"
 			"custom/spacer"
 			"cpu"
@@ -73,9 +75,18 @@
 		"network" = {
 		  format-wifi = "  {essid} ({signalStrength}%)"; # Иконка, имя сети, сила сигнала
 		  format-ethernet = "󰈀 {ifname}"; # Иконка для проводного подключения
-		  format-disconnected = "󰖪 Disconnected"; # Иконка и текст, когда нет подключения
+		  format-disconnected = "󰖪"; # Иконка и текст, когда нет подключения
 		  tooltip-format = "{ifname} via {gwaddr} "; # Подсказка при наведении
 		  on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor"; # Открывает GUI для настройки сетей
+			};
+
+			"bluetooth" = {
+			  "format": "", 
+			  "format-connected": "", 
+			  "format-disabled": "󰂲", 
+			  "on-click": "${pkgs.blueman}/bin/blueman-manager",
+			  "tooltip-format": "{device_alias}",
+			  "tooltip-format-connected": "{device_alias} ({device_battery_percentage}%)" 
 			};
 		# Hardware
 
