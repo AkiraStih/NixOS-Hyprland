@@ -1,24 +1,14 @@
-{ config, pkgs, lib, ... }:
+# ~/nixhypr/nixos/modules/hardware/t480.nix
+
+{ config, pkgs, ... }:
 
 {
-  # Создаем нашу собственную опцию, чтобы не хранить UUID внутри модуля
-  options.bogdan.t480.rootfsUUID = lib.mkOption {
-    type = lib.types.str; # Тип опции - строка
-    default = ""; # Значение по умолчанию
-    description = "The UUID of the root filesystem for resumeDevice.";
-  };
+  # Вся конфигурация просто переносится сюда
+  boot.kernelParams = [ "acpi_osi=!\" acpi_osi=Windows 2020\"" ];
 
-  # А теперь сама конфигурация, которая будет применяться
-  config = {
-    # 1. Главный фикс для сна
-    boot.kernelParams = [ "acpi_osi=!\" acpi_osi=Windows 2020\"" ];
+  swapDevices = [
+    { device = "/swapfile"; size = 16 * 1024; }
+  ];
 
-    # 2. Настройка Swap
-    swapDevices = [
-      { device = "/swapfile"; size = 16 * 1024; }
-    ];
-
-    # 3. Указываем ядру, откуда просыпаться, ИСПОЛЬЗУЯ нашу новую опцию!
-    boot.resumeDevice = "/dev/disk/by-uuid/${config.bogdan.t480.rootfsUUID}";
-  };
+  boot.resumeDevice = "/dev/disk/by-uuid/ВАШ-UUID-КОРНЕВОГО-РАЗДЕЛА"; # <--- UUID остается здесь
 }
