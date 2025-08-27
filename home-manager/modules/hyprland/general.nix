@@ -3,17 +3,27 @@
 		monitor = ",1920x1080@75,auto,1";
 
 		exec-once = [
-			"${pkgs.waybar}/bin/waybar"
-			"${pkgs.swaynotificationcenter}/bin/swaync"
-			"${pkgs.waypaper}/bin/waypaper --restore"
-
-			# Set volume to #65%
-			"sleep 4 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
-			"sleep 5 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
-
-			# Clipboard history
-			"${pkgs.cliphist}/bin/cliphist wipe"
-			"${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
+		 # --- ДОБАВЬТЕ ЭТИ СТРОКИ В САМОЕ НАЧАЛО ---
+		  # Активируем системную шину D-Bus для Wayland
+		  "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+		  # Запускаем портал для Hyprland
+		  "${pkgs.xdg-desktop-portal-hyprland}/bin/xdg-desktop-portal-hyprland"
+		  # Запускаем портал GTK как запасной вариант (многие приложения его используют)
+		  "${pkgs.xdg-desktop-portal-gtk}/bin/xdg-desktop-portal-gtk"
+		  # ---------------------------------------------
+		  
+		  # Ваши существующие команды
+		  "${pkgs.waybar}/bin/waybar"
+		  "${pkgs.swaynotificationcenter}/bin/swaync"
+		  "${pkgs.waypaper}/bin/waypaper --restore"
+		
+		  # Set volume to #65%
+		  "sleep 4 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.64"
+		  "sleep 5 && ${pkgs.wireplumber}/bin/wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.65"
+		
+		  # Clipboard history
+		  "${pkgs.cliphist}/bin/cliphist wipe"
+		  "${pkgs.wl-clipboard}/bin/wl-paste --type text --watch ${pkgs.cliphist}/bin/cliphist store"
 		];
 
 		general =  {
