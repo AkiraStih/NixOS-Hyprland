@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, unstable, ... }: {
 
 	environment.systemPackages = with pkgs; [
 
@@ -16,6 +16,7 @@
 		cargo
 		vscodium
 		unstable.hiddify-app
+		nekoray
 
 		# CLI
 		btop
