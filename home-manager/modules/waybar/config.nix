@@ -16,15 +16,20 @@
 			"hyprland/window"
 		];
 		modules-right = [
-			"custom/notification"
+			
+			"network"
 			"custom/spacer"
 			"pulseaudio"
 			"custom/spacer"
-			"memory"
-			"custom/spacer"
 			"cpu"
 			"custom/spacer"
+			"memory"
+			"custom/spacer"
+			"battery"
+			"custom/spacer"
 			"clock"
+			"custom/notification"
+			
 		];
 
 		# Modules
@@ -65,6 +70,13 @@
 			format = "{:%d/%m/%y %H:%M}";
 		};
 
+		"network" = {
+		  format-wifi = "  {essid} ({signalStrength}%)"; # Иконка, имя сети, сила сигнала
+		  format-ethernet = "󰈀 {ifname}"; # Иконка для проводного подключения
+		  format-disconnected = "󰖪 Disconnected"; // Иконка и текст, когда нет подключения
+		  tooltip-format = "{ifname} via {gwaddr} "; // Подсказка при наведении
+		  on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor"; // Открывает GUI для настройки сетей
+			};
 		# Hardware
 
 		"cpu" = {
