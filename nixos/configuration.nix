@@ -25,6 +25,7 @@
 	};
 
 	services.displayManager.ly.enable = true;
+	hardware.enableRedistributableFirmware = true;
 
 	nix.settings.experimental-features = ["nix-command" "flakes"];
 
