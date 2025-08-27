@@ -8,7 +8,7 @@
 
   programs.nh = {
     enable = true;
-    flake = "/home/mafien0/nix";
+    flake = "/home/bogdan/nix";
   };
 
 	networking = {
@@ -17,7 +17,7 @@
 	};
 
 	time = {
-		timeZone = "Asia/Almaty";
+		timeZone = "Europe/Moscow";
 		hardwareClockInLocalTime = true;
 	};
 
