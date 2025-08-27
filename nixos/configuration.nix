@@ -11,20 +11,21 @@
     flake = "/home/mafien0/nix";
   };
 
+  home-manager.backupFileExtension = "backup";
+
 	networking = {
 		networkmanager.enable = true;
 		hostName = "nixos";
 	};
 
 	time = {
-		timeZone = "Asia/Almaty";
+		timeZone = "Europe/Moscow";
 		hardwareClockInLocalTime = true;
 	};
 
 	services.displayManager.ly.enable = true;
-
+  services.openssh.enable = true;
 	nix.settings.experimental-features = ["nix-command" "flakes"];
-
 	nixpkgs.config.allowUnfree = true;
 	system.stateVersion = "25.05";
 }
