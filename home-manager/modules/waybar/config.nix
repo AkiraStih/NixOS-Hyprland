@@ -81,12 +81,12 @@
 			};
 
 			"bluetooth" = {
-			  "format": "";
-			  "format-connected": "";
-			  "format-disabled": "󰂲"; 
-			  "on-click": "${pkgs.blueman}/bin/blueman-manager";
-			  "tooltip-format": "{device_alias}";
-			  "tooltip-format-connected": "{device_alias} ({device_battery_percentage}%)" ;
+			  "format" = "";
+			  "format-connected" = "";
+			  "format-disabled" = "󰂲"; 
+			  "on-click" = "${pkgs.blueman}/bin/blueman-manager";
+			  "tooltip-format" = "{device_alias}";
+			  "tooltip-format-connected" = "{device_alias} ({device_battery_percentage}%)" ;
 			};
 		# Hardware
 
