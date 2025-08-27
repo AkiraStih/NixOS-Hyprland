@@ -10,5 +10,5 @@
     { device = "/swapfile"; size = 16 * 1024; }
   ];
 
-  boot.resumeDevice = "/dev/disk/by-uuid/ВАШ-UUID-КОРНЕВОГО-РАЗДЕЛА"; # <--- UUID остается здесь
+  boot.resumeDevice = "/dev/disk/by-uuid/e8aea24e-029d-4e5e-b6f9-68276d452023"; # <--- UUID остается здесь
 }
