@@ -1,5 +1,5 @@
 {
-	users.users.mafien0 = {
+	users.users.bogdan = {
 		isNormalUser = true;
 		extraGroups = [ "wheel" "input" "networkmanager" "docker" ];
 	};
