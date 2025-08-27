@@ -73,9 +73,9 @@
 		"network" = {
 		  format-wifi = "  {essid} ({signalStrength}%)"; # Иконка, имя сети, сила сигнала
 		  format-ethernet = "󰈀 {ifname}"; # Иконка для проводного подключения
-		  format-disconnected = "󰖪 Disconnected"; // Иконка и текст, когда нет подключения
-		  tooltip-format = "{ifname} via {gwaddr} "; // Подсказка при наведении
-		  on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor"; // Открывает GUI для настройки сетей
+		  format-disconnected = "󰖪 Disconnected"; # Иконка и текст, когда нет подключения
+		  tooltip-format = "{ifname} via {gwaddr} "; # Подсказка при наведении
+		  on-click = "${pkgs.networkmanagerapplet}/bin/nm-connection-editor"; # Открывает GUI для настройки сетей
 			};
 		# Hardware
 
