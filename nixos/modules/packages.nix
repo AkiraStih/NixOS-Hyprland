@@ -17,6 +17,7 @@
 		vscodium
 		nekoray
 		blueman
+		vesktop
 
 		# CLI
 		btop
