@@ -6,9 +6,12 @@
 	];
 	i18n.defaultLocale = "en_US.UTF-8";
 
+
+
+
   programs.nh = {
     enable = true;
-    flake = "/home/mafien0/nix";
+    flake = "/home/bogdan/nix";
   };
 
   home-manager.backupFileExtension = "backup";
