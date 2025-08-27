@@ -47,7 +47,7 @@
 			};
 		in {
 			nixosConfigurations = {
-				nixos = nixpkgs.lib.nixosSystem {
+				nixos-btw = nixpkgs.lib.nixosSystem {
 					inherit system;
 					modules = [
 						./nixos/configuration.nix
@@ -61,7 +61,7 @@
 			};
 
 			homeConfigurations = {
-				mafien0 = home-manager.lib.homeManagerConfiguration {
+				bogdan = home-manager.lib.homeManagerConfiguration {
 					inherit pkgs;
 					extraSpecialArgs = {
 						inherit inputs system;
