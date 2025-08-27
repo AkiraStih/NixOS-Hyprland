@@ -14,7 +14,6 @@
     flake = "/home/bogdan/nix";
   };
 
-  home-manager.backupFileExtension = "backup";
 
 	networking = {
 		networkmanager.enable = true;
