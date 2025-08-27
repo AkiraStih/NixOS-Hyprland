@@ -50,7 +50,7 @@
 			};
 		in {
 			nixosConfigurations = {
-				nixos-btw = nixpkgs.lib.nixosSystem {
+				nixos = nixpkgs.lib.nixosSystem {
 					inherit system;
 					modules = [
 						./nixos/configuration.nix
