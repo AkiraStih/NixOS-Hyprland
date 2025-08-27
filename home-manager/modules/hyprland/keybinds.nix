@@ -17,7 +17,7 @@
 
     bind = [
 			# Basic
-      "$mod SHIFT, Q, killactive,"
+      "$mod, Q, killactive,"
       "$mod SHIFT, M, exit,"
       "$mod, V, togglefloating,"
       "$mod, F, fullscreen,"
@@ -27,7 +27,6 @@
       "$mod, B, exec, $browser"
       "$mod, E, exec, $explorer"
       "$mod, T, exec, $calc"
-      "$mod, D, exec, $discord"
 
       "$mod, Z, exec, $colorPicker"
       "$mod, P, exec, $wallpaper"
