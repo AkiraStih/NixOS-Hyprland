@@ -45,11 +45,14 @@
 		gh
 		sl
 		neovim
-
+    
 		# Other
 		home-manager
 		gcc
 		jdk
+    acpi
+		nodejs_24
+
 
 		# Prismlauncher
 		(prismlauncher.override {
