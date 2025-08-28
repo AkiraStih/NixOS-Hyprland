@@ -1,4 +1,4 @@
-{
+{ pkgs, ... }:{
 	imports = [
 		./modules.nix
 	];
@@ -8,4 +8,10 @@
 		homeDirectory = "/home/bogdan";
 		stateVersion = "25.05";
 	};
+
+home.packages = with pkgs; [
+    # ... другие ваши пакеты
+    xdg-desktop-portal-hyprland
+    xdg-desktop-portal-gtk # GTK нужен как запасной вариант для многих приложений
+  ];
 }
