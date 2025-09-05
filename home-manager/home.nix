@@ -9,7 +9,7 @@
 		homeDirectory = "/home/bogdan";
 		stateVersion = "25.05";
 };
-home-manager.backupFileExtension = "backup";
+backupFileExtension = "backup";
 
 
 home.packages = with pkgs; [
