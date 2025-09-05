@@ -80,6 +80,7 @@
 						nixvim.homeModules.nixvim
 						nixcord.homeModules.nixcord
 						inputs.spicetify-nix.homeManagerModules.default
+						{ home.backupFileExtension = "backup"; }
 					];
 				};
 			};
