@@ -7,9 +7,10 @@
 		username = "bogdan";
 		homeDirectory = "/home/bogdan";
 		stateVersion = "25.05";
+home-manager.backupFileExtension = "backup";
+
 };
 
-home-manager.backupFileExtension = "backup";
 
 home.packages = with pkgs; [
     # ... другие ваши пакеты
