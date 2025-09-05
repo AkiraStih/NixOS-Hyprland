@@ -1,6 +1,8 @@
 { pkgs, ... }:{
 	imports = [
 		./modules.nix
+   		 inputs.home-manager.nixosModules.default
+
 	];
 
 	home = {
