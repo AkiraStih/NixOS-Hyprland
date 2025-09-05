@@ -43,7 +43,7 @@
 		nixcord,
 		spicetify-nix,
 		nixpkgs-unstable,
-		nixos-hardware
+		nixos-hardware,
 		... }: let
 			system = "x86_64-linux";
 
