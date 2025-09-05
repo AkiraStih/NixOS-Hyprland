@@ -6,6 +6,8 @@
 
     	nixpkgs-unstable.url = "github:NixOS/nixpkgs/nixos-unstable";
 
+		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+
 		home-manager = {
 			url = "github:nix-community/home-manager/release-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
@@ -41,6 +43,7 @@
 		nixcord,
 		spicetify-nix,
 		nixpkgs-unstable,
+		nixos-hardware
 		... }: let
 			system = "x86_64-linux";
 
@@ -55,6 +58,7 @@
 					modules = [
 						./nixos/configuration.nix
 						home-manager.nixosModules.home-manager
+						nixos-hardware.nixosModules.dell-xps-13-9380
 					];
 
 					specialArgs = {
